@@ -1,0 +1,495 @@
+/* CSS Document */
+body {font-family: Calibri; font-size: 8pt }
+
+/*SELECT varios*/
+SELECT { font-family:Calibri; font-size:12px; }
+
+/*PARA LOS LINKS*/
+a:link {font-family: Arial; font-size:11px; color:white}
+a:visited {font-family: Arial; font-size:11px; color:white}
+a:hover {font-size:12; font-weight:bold; color: yellow;}
+a.menu {font-family: Arial; font-size:11px; color:black; text-decoration: none; }
+
+a.cliqueame {font-family: Arial; font-size:11px; color:black; text-decoration: none;}
+a.cliqueame:link {font-family: Arial; font-size:11px; color:black; text-decoration: none;}
+a.cliqueame:visited {font-family: Arial; font-size:11px; color:black; text-decoration: none;}
+a.cliqueame:hover{font-family: Arial; font-size:11px; color:black; text-decoration: none;}
+
+a.opcion:link {font-family: Arial; font-size:11px; color:black}
+a.opcion:visited {font-family: Arial; font-size:11px; color:black}
+a.opcion:hover{font-family: Arial; font-size:11px; color:black}
+
+a.opcionclic:link {font-family: Arial; font-size:11px; color:black}
+a.opcionclic:visited {font-family: Arial; font-size:11px; color:black}
+a.opcionclic:hover{font-family: Arial; font-size:11px; color:black}
+
+a.opcionclic500:link {font-family: Arial; font-size:11px; color:black}
+a.opcionclic500:visited {font-family: Arial; font-size:11px; color:black}
+a.opcionclic500:hover{font-family: Arial; font-size:11px; color:black}
+
+a.opcionclic850:link {font-family: Arial; font-size:11px; color:black}
+a.opcionclic850:visited {font-family: Arial; font-size:11px; color:black}
+a.opcionclic850:hover{font-family: Arial; font-size:11px; color:black}
+
+a.opcionSinCerrar:link {font-family: Arial; font-size:11px; color:blue; text-decoration: none;}
+a.opcionSinCerrar:visited {font-family: Arial; font-size:11px; color:blue; text-decoration: none;}
+a.opcionSinCerrar:hover{font-family: Arial; font-size:11px; color:blue; text-decoration: none;}
+
+a.clueTitulo:link {font-family: Arial; font-size:12px; color:black;font-weight:bold; text-decoration: none;}
+a.clueTitulo:visited {font-family: Arial; font-size:12px; color:black;font-weight:bold; text-decoration: none;}
+a.clueTitulo:hover{font-family: Arial; font-size:12px; color:black;font-weight:bold;text-decoration: none;}
+
+a.sinTitulo:link {font-family: Arial; font-size:12px; color:black;font-weight:bold; text-decoration: none;}
+a.sinTitulo:visited {font-family: Arial; font-size:12px; color:black;font-weight:bold; text-decoration: none;}
+a.sinTitulo:hover{font-family: Arial; font-size:12px; color:black;font-weight:bold;text-decoration: none;}
+
+a.sinTituloBlanco:link {font-family: Arial; font-size:12px; color:white;font-weight:bold; text-decoration: none;}
+a.sinTituloBlanco:visited {font-family: Arial; font-size:12px; color:white;font-weight:bold; text-decoration: none;}
+a.sinTituloBlanco:hover{font-family: Arial; font-size:12px; color:white;font-weight:bold;text-decoration: none;}
+
+a.clueEtiqueta:link {font-family: Calibri; font-size:12px; color:black;font-weight:none; text-decoration: none;}
+a.clueEtiqueta:visited {font-family: Calibri; font-size:12px; color:black; font-weight:none; text-decoration: none;}
+a.clueEtiqueta:hover{font-family: Calibri; font-size:12px; color:black; font-weight:none; text-decoration: none;}
+
+a.clueTituloBlanco:link {font-family: Arial; font-size:14px; color:white;font-weight:bold; text-decoration: none;}
+a.clueTituloBlanco:visited {font-family: Arial; font-size:14px; color:white;font-weight:bold; text-decoration: none;}
+a.clueTituloBlanco:hover{font-family: Arial; font-size:14px; color:white;font-weight:bold;text-decoration: none;}
+
+a.clueBlanco:link {font-family: Arial; font-size:12px; color:white;font-weight:bold; text-decoration: none;}
+a.clueBlanco:visited {font-family: Arial; font-size:12px; color:white;font-weight:bold; text-decoration: none;}
+a.clueBlanco:hover{font-family: Arial; font-size:12px; color:white;font-weight:bold;text-decoration: none;}
+
+SPAN.menu {font-size:12; font-weight:bold; color:yellow;}
+
+FONT.resaltarRojo {font-weight:bold; color: rgb(153,0,0)}
+FONT.resaltarNaranja {font-weight:bold; color:rgb(255,51,0)}
+
+
+.moy { font-family: Tahoma, Verdana, Arial; font-size: 13px;  color: #FFFFFF; background-color: #6699CC; border: #000099; border-style:  none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+
+input.cliente { font-family: Tahoma, Verdana, Arial; font-size: 13px;  color: rgb(0,0,0); background-color: rgb(127,240,224); border: #000099; border-style: none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+input.busqueda { font-family: Tahoma, Verdana, Arial; font-size: 11px;  color: rgb(0,0,0); background-color: rgb(255,255,255); border: #000099; border-style: none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+select.busqueda { font-family: Tahoma, Verdana, Arial; font-size: 11px;  color: rgb(0,0,0); background-color: rgb(255,255,255); border: #000099; border-style: none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+
+
+.claseResaltar { font-family: Tahoma, Verdana, Arial; font-size: 13px;  color: rgb(0,0,0); background-color: rgb(204,231,238); border: #000099; border-style: none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px }
+
+
+
+.claseMostrado { font-family: Tahoma, Verdana, Arial; font-size: 13px;  color: #FFFFFF; background-color: #6699CC; border: #000099; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+
+.claseOculto { font-family: Tahoma, Verdana, Arial; font-size: 13px;  color: rgb(0,0,0); background-color: rgb(127,240,224); border: #000099; border-style: none; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px  }
+
+/* AQUI VAN LAS ETIQUETAS QUE TENGAN QUE VER CON LOS DIVS*/
+/*  ----------------------------------------------------------------------------------------*/
+DIV { text-align}
+
+/* Este es el DIV para las gestiones */
+DIV.modificable { text-align: left; overflow: auto; width:1425;  height:30; border: 0px solid #000000;  }
+DIV.encabDespachoCliente { text-align: left; overflow: auto; width:1425;  height:130; border: 0px solid #000000;  }
+
+DIV.varios180 { text-align: left; overflow: auto; width:180;  height:230; }
+DIV.varios450 { text-align: left; overflow: auto; width:450;  height:550; }
+DIV.varios300 { text-align: left; overflow: auto; width:300;  height:300; }
+
+DIV.varios1320 { text-align: left; overflow: auto; width:1320;  height:'100%'; }
+DIV.varios { text-align: left; overflow: auto; width:520;  height:180; border: 1px solid #000000; }
+DIV.varios2 { text-align: left; overflow: auto; width:600;  height:180; border: 1px solid #000000; }
+DIV.varios2e { text-align: left; overflow: auto; width:650;  height:180; border: 1px solid #000000; }
+DIV.varios2b { text-align: left; overflow: auto; width:750;  height:180; border: 1px solid #000000; }
+DIV.variosAncho90p { text-align: left; overflow: auto; width:90%;  height:250; border: 1px solid #000000; }
+DIV.varios2c { text-align: left; overflow: auto; width:670;  height:180; border: 1px solid #000000; }
+DIV.varios2d { text-align: left; overflow: auto; width:670;  height:120; border: 1px solid #000000; }
+DIV.varios3 { text-align: left; overflow: auto; width:670;  height:200; border: 1px solid #000000; }
+DIV.variospeque { text-align: left; overflow: auto; width:480;  height:130; border: 1px solid #000000; }
+DIV.variospeque580 { text-align: left; overflow: auto; width:550;  height:130; border: 1px solid #000000; }
+DIV.variostit { text-align: left;  width:520;  height:45; border: 1px solid #000000; }
+DIV.variostit600 { text-align: left;  width:600;  height:25; border: 1px solid #000000; }
+DIV.variostitajuste { text-align: left;  width:100%;  height:25; border: 1px solid #000000; }
+DIV.costosVarios { text-align: left; overflow: auto; width: 1500; height: 400;   border: 1px solid #000000; }
+
+DIV.container{ margin: auto; width: 95%;}
+
+/*DIV.varios { text-align: left; overflow: auto; width:380;  height:180; border: 1px solid #000000; }*/
+TABLE {font-family:Calibri; font-size:12px;   }
+TABLE.mejor {font-family:Calibri; font-size:12px;background-color:rgb(206,204,204);border: 1px solid black; }
+
+TH { font-weight:bold;  color: #FFFFFF; background-color:rgb(3,32,100)}
+TH.pagina { font-weight:bold; font-size:20px;  color: #FFFFFF}
+TH.principal { font-weight:bold; font-size:16px;  color: #FFFFFF}
+TD.principal { background-color:rgb(173,62,62); font-weight:bold; font-size:16px;  color: #FFFFFF}
+TD.principalAlt { background-color:rgb(130,50,10); font-weight:bold; font-size:16px;  color: #FFFFFF}
+TH.noEditable {background-color:rgb(173,62,62); font-weight:bold; font-size:16px;  color: #FFFFFF}
+TH.noEditableEncab {background-color:rgb(173,62,62); font-weight:bold; font-size:12px;  color: #FFFFFF}
+TH.rojo {background-color:rgb(240,186,182);font-weight:bold; color:rgb(255,0,0)  }
+TD.rojo {background-color:rgb(240,186,182);font-weight:bold; color:rgb(255,0,0)  }
+TD.amarillo {background-color:rgb(255,240,115);font-weight:bold; color:rgb(166,148,0)  }
+TH.info {background-color:rgb(174,180,4);font-weight:bold;  }
+TD.verde {background-color:rgb(0,102,0);font-weight:bold; color:rgb(255,255,255)  }
+
+TD.normal {background-color:rgb(255,255,255)}
+TD.plomo  {background-color:rgb(192,192,192)}
+TD.celeste {background-color:rgb(221,230,251)}
+TD.plomoverde {background-color:rgb(192,192,192); font-weight:bold; color:rgb(0,153,51)}
+TD.plomoamarillo {background-color:rgb(192,192,192);font-weight:bold; color:rgb(204,102,0)}
+TD.plomorojo  {background-color:rgb(192,192,192); font-weight:bold; color:rgb(153,0,51) }
+TD.celesteverde {background-color:rgb(221,230,251); font-weight:bold; color:rgb(0,153,51) }
+TD.celesteamarillo {background-color:rgb(221,230,251); font-weight:bold; color:rgb(204,102,0)}
+TD.celesterojo {background-color:rgb(221,230,251); font-weight:bold; color:rgb(153,0,51)}
+TD.celdaresumen {background-color:rgb(146, 184, 211); font-weight:bold;}
+
+TD.despachocolor1 {background-color:rgb(238,238,238);  color: rgb(254,0,0); font-weight:bold;}
+TD.despachocolor1concluido {background-color:rgb(238,238,238);  color: rgb(0,0,255);}
+TD.despachocolor2 {background-color:rgb(255,255,204);  color: rgb(254,0,0); font-weight:bold;}
+TD.despachocolor2concluido {background-color:rgb(255,255,204); color: rgb(0,0,255);}
+TD.lineaarriba {border-top-style: solid; border-top-width: 1px;}
+TD.lineaabajo {border-bottom-style: solid; border-top-width: 1px;}
+
+TD.despachocolor1linea {background-color:rgb(238,238,238);  color: rgb(254,0,0); font-weight:bold;border-top-style: solid; border-top-width: 2px;}
+TD.despachocolor1concluidolinea {background-color:rgb(238,238,238);  color: rgb(0,0,255);border-top-style: solid; border-top-width: 2px;}
+TD.despachocolor2linea {background-color:rgb(255,255,204);  color: rgb(254,0,0); font-weight:bold;border-top-style: solid; border-top-width: 2px;}
+TD.despachocolor2concluidolinea {background-color:rgb(255,255,204); color: rgb(0,0,255);border-top-style: solid; border-top-width: 2px;}
+
+TD.cabecera {font-size: 1.5em; font-weight:b 30, 132, 73 old;  color: #FFFFFF; background-color:rgb(8,50,147)}
+TD.movim {font-size: 1.5em; font-weight:bold;  color: #FFFFFF; background-color:rgb(31,85,211)}
+
+TR.plomo  {background-color:rgb(192,192,192)}
+TR.celeste {background-color:rgb(221,230,251) }
+
+TR.letrasMarrones {font-weight:bold; color:rgb( 110, 44, 0 )}
+TR.letrasVerdes {font-weight:bold; color:rgb( 30, 132, 73 )}
+TR.letrasAzules {font-weight:bold; color:rgb( 84, 153, 199 )}
+
+  
+.tr_hover {background-color: #FFF7B2}
+
+.letraRoja {color: Red; text-align: right;}
+.letraAzul {color: Blue; text-align: right;}
+
+
+table.carga {background-color: rgb(234, 244, 253)}
+
+table.verprincipal {background-color: rgb(191,191,191)}
+
+  /* css for timepicker */
+    .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+    .ui-timepicker-div dl { text-align: left; }
+    .ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+    .ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+    .ui-timepicker-div td { font-size: 90%; }
+    .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+    .ui-timepicker-rtl{ direction: rtl; }
+    .ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+    .ui-timepicker-rtl dl dt{ float: right; clear: right; }
+    .ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+
+
+.paraExcel 	{padding:0px;mso-ignore:padding;color:windowtext;font-size:10.0pt;font-weight:400;font-style:normal;text-decoration:none;font-family:Tahoma, sans-serif;mso-font-charset:0;mso-number-format:General;text-align:general;vertical-align:bottom;mso-background-source:auto;mso-pattern:auto;white-space:nowrap;}
+
+table.fullRD {width: 100%;  max-width: 1500px;}
+div.centroRD {background-image: url(../imagenes/fondoInicio.jpg);  width: 500px; height:180px; position:absolute; left:40%; top:50%; margin:-75px 0 0 -135px; }
+/*div.centroRD {background-color:#FFFFFF;  width: 100%; max-width: 300px; height: 75%; max-heigth: 150px; }*/ 
+div.fullRD {background-color:#FFFFFF; width: 100%; max-width: 1500px; height: 75%; max-height: 350px; overflow:auto;}
+div.fullRDCompleto {background-color:#FFFFFF; width: 100%; max-width: 1500px; height: 75%; max-height: 350px;}
+div.costosVariosRD {text-align: left; width: 100%; max-width: 1500px; height: 400; border: 1px solid #000000; overflow: auto;}
+div.movil  {background-color:#FFFFFF; width: 100%; max-width: 350px; height: 100%; overflow:auto;}
+
+
+
+div.fullRDCostosContenedor {background-color:#FFFFFF; width: 100%; max-width: 1500px; height: 80%; max-height: 650px; overflow:auto;position: relative;}
+div.fullRDCostosData {background-color:#FFFFFF; width: 100%; max-width: 1500px; height: 100%; max-height: 620px; overflow:auto;position:absolute; top:22; left:0;}
+div.fullRDCostosResumen {background-color:#FFFFFF; width: 100%; max-width: 1500px; height:25px; overflow:auto;position:absolute; top:0; left:0;}
+
+div.fullRD {background-color:#FFFFFF; width: 100%; max-width: 1500px; height: 75%; max-height: 950px; overflow:auto;}
+
+div.mensajes { font-weight:bold; font-size:15px; color: #FFFFFF;}
+div.rojo  {background-color:#FF3300; font-weight:bold; font-size:15px; color: #FFFFFF;}
+div.verde {background-color:#007F00; font-weight:bold; font-size:15px; color: #FFFFFF;}
+
+.rojo {background-color:rgb(240,186,182); }
+
+DIV.divMenu { text-align: left; width:630;  height:30; background-color: #032064;}
+
+#prinOpciones{
+background:#cccccc;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+width:100%;
+}
+
+.prinCol {
+width: 33%;min-width: 360px; max-width: 433px; height:90%; max-height: 630px;
+background:#ccc; float:left;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+}
+
+.dosCol {
+width: 50%;min-width: 380px; max-width: 700px; height: 500px;
+background:#ccc; float:left;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+}
+
+.dosCol700x1200 {
+width: 50%;min-width: 570px; max-width: 700px; height: 1200px;
+background:#ccc; float:left;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+}
+.dosCol700x2150 {
+width: 50%;min-width: 570px; max-width: 700px; height: 2150px;
+background:#ccc; float:left;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+}
+
+.dosColOpc {
+width: 50%;min-width: 380px; max-width: 500px; height: 500px;
+background:#ccc; float:left;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+}
+
+#dosColOpciones{
+background:#cccccc;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+width:100%;
+height: 1400px;
+}
+
+table.tblDosCol td{
+	height: 75px;
+}
+
+div.nuevaForma{
+  background:#B1C8E2;  
+}
+
+table.nuevaForma{
+  background:#B1C8E2;  
+}
+
+table.nuevaForma th{
+  background:#EAF4FD;
+  color:#2E6E9E;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+}
+
+table.nuevaForma #celdaCuenta{
+  background:#B1C8E2;  
+  color:#032064;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #a6c9e2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 0.25em;
+}
+
+div.movil{
+  display:none;
+}
+
+td.celdaTit {
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.menuCol {
+width: 33%;min-width: 400px; max-width: 440px; height:30%; max-height: 180px;
+background:#EAF4FD;
+float:relative;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+border-radius: 6px;
+}
+
+.fondoMenuCol {
+background:#2E6E9E;
+}
+
+.prendaColor, .prendaTalla{
+    height:20px;
+    width:100px;
+    background-color:#DDEBF9;
+    border:2px #4679BD solid;
+    margin:5px;
+}
+
+td.selector{
+    background-color:#DDE6FB;
+    min-width:250px;
+    height:50px;
+    max-height:150px;
+    overflow:auto;
+    
+}
+
+td.selector2{
+    background-color:#DDE6FB;
+    min-width:150px;
+    height:50px;
+    max-height:150px;
+    overflow:auto;
+    
+}
+
+td.selector3{
+    background-color:#DDE6FB;
+    min-width:150px;
+    height:200px;
+    max-height:150px;
+    overflow:auto;
+}
+
+/*Intentando mejorar la apariencia de los botones*/
+ .btn{
+  font-size:10px;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:white;
+  background:#638cb5;
+  border:0px;
+  /*width:180px;*/
+  padding: 5px 10px 18px  ;
+  height:19px;
+  border-radius: 8px 8px 8px 8px;
+ }
+
+ .btn:hover {
+    background: #126DB3;
+}
+
+input[type="file"] {
+    position:relative;
+    z-index:1;
+    margin-left:-90px;
+}
+
+  input[type="file"]#userfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label[for="userfile"] {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #638cb5;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 8px 30px !important;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+
+.movilCol {
+width: 33%;min-width: 300px; max-width: 340px; height:30%; max-height: 180px;
+background:#EAF4FD;
+float:relative;
+color: black;
+font-size:15px;
+margin:0px;
+padding:0px;
+display: inline-block;
+border-radius: 6px;
+}
+
+
+/*CSS para el formulario de logeo*/
+#login {
+    background:#032064;
+    width: 250px;
+    border: 1px solid white;
+    margin: 40px auto;
+    padding: 1em;
+    border-radius:6px;
+}
+
+.cliCuenta input{
+  border: 1px solid #a6c9e2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 0.25em;
+
+
+}
+
+#login input {
+    margin: 1em 0 0 0;
+    width: 200 px;
+    border: 0px;
+    padding: 0.5em;
+    border-radius:6px;
+}
+
+#login input[type=submit] {
+    color: white;
+    font-weight: bold;
+    background: #167AC6;
+}
+
+#login input[type=submit]:hover {
+    background: #126DB3;
+}
+
+
+div#contenedor{
+  margin:auto;
+  width:95%;
+  height:750px;
+  /*background-color:green;*/
+}
+
+
+
+
+@media screen and (max-width:450px){
+  div.fullRD{
+    display:none;
+  }	
+  div.movil{
+    display:inline-block;
+  }
+}
+

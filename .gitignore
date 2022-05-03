@@ -1,1 +1,4 @@
 error_log
+imagenes/
+librerias/*/
+librerias/config.ini.bak

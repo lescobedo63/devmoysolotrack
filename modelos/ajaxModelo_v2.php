@@ -227,7 +227,7 @@
 
 
   function buscarDataDespachoIdProgram($db,$idProgramacion){
-    $consulta = $db->prepare("SELECT  `fchDespacho`, `correlativo`, `idProgramacion`, `guiaCliente`, `hraInicio`, `fchDespachoFinCli`, `fchDespachoFin`, `hraFin`, `placa`, `considerarPropio`, `m3`, `valorServicio`, `igvServicio`, `idCliente`, `cuenta`, `correlCuenta`, `tipoServicioPago`, `nroAuxiliares`, `nroAuxiliaresAdic`, `costo`, `topeServicioHraNormal`, `hrasNormales`, `tolerHrasNormales`, `costoHraExtra`, `toleranCobroHraExtra`, `valorConductor`, `hraNormCondDespacho`, `tolerHraCondDespacho`, `valHraAdicCondDespacho`, `valorAuxiliar`, `hraNormAuxDespacho`, `tolerHraAuxDespacho`, `valHraAdicAuxDespacho`, `nroAuxiliaresCuenta`, `valorAuxAdicional`, `usarMaster`, `tpoExtraHras`, `costoTotal`, `nroGuias`, `nroDespachos`, `usaReten`, `concluido`, `hraInicioBase`, `kmInicio`, `kmInicioCliente`, `kmFinCliente`, `hraFinCliente`, `lugarFinCliente`, `kmFin`, `recorridoEsperado`, `zonaDespacho`, `ptoOrigen`, `idOrigen`, `idSedeOrigen`, `tipoDestino`, `ptoDestino`, `observacion`, `observCliente`, `docCobranza`, `tipoDoc`, `pagado`, `pagoEnPlanilla`, `terceroConPersonalMoy`, `contarDespacho`, `superCuenta`, des.`usuario`, des.`fchCreacion`, `modoCreacion`, `estadoDespacho`, `usuarioGrabaFin`, `fchGrabaFin`, `hraGrabaFin`, `usuarioCreaCobranza`, `fchCreaCobranza`, `idProducto`, `valKmAdic`, `hraIniEsperado`, `valAdicHraIniEsper`, `hraFinEsperado`, `valAdicHraFinEsper`, `cobrarPeaje`, `cobrarRecojoDevol`, `valUnidTercCCond`, `valUnidTercSCond`, `hrasNormalTerc`, `tolerHrasNormalTerc`, `valHraExtraTerc`, `valKmAdicTerc`, `tolerKmEsperado`, `movilAsignado`, `editaUsuarioDesp`, `cliente`.nombre, valAuxTerceroDesp FROM `despacho` AS des, cliente  WHERE des.idCliente = cliente.idRuc AND des.idProgramacion = :idProgramacion ");
+    $consulta = $db->prepare("SELECT  `fchDespacho`, `correlativo`, `idProgramacion`, `guiaCliente`, `hraInicio`, `fchDespachoFinCli`, `fchDespachoFin`, `hraFin`, `placa`, `considerarPropio`, `m3`, `valorServicio`, `igvServicio`, `idCliente`, `cuenta`, `correlCuenta`, `tipoServicioPago`, `nroAuxiliares`, `nroAuxiliaresAdic`, `costo`, `topeServicioHraNormal`, `hrasNormales`, `tolerHrasNormales`, `costoHraExtra`, `toleranCobroHraExtra`, `valorConductor`, `hraNormCondDespacho`, `tolerHraCondDespacho`, `valHraAdicCondDespacho`, `valorAuxiliar`, `hraNormAuxDespacho`, `tolerHraAuxDespacho`, `valHraAdicAuxDespacho`, `nroAuxiliaresCuenta`, `valorAuxAdicional`, `usarMaster`, `tpoExtraHras`, `costoTotal`, `nroGuias`, `nroDespachos`, `usaReten`, `concluido`, `hraInicioBase`, `kmInicio`, `kmInicioCliente`, `kmFinCliente`, `hraFinCliente`, `lugarFinCliente`, `kmFin`, `recorridoEsperado`, `zonaDespacho`, `ptoOrigen`, `idOrigen`, `idSedeOrigen`, `tipoDestino`, `ptoDestino`, `observacion`, `observCliente`, `docCobranza`, `tipoDoc`, `pagado`, `pagoEnPlanilla`, `terceroConPersonalMoy`, `contarDespacho`, `superCuenta`, des.`usuario`, des.`fchCreacion`, `modoCreacion`, `estadoDespacho`, `usuarioGrabaFin`, `fchGrabaFin`, `hraGrabaFin`, `usuarioCreaCobranza`, `fchCreaCobranza`, `idProducto`, `valKmAdic`, `hraIniEsperado`, `valAdicHraIniEsper`, `hraFinEsperado`, `valAdicHraFinEsper`, `cobrarPeaje`, `cobrarRecojoDevol`, `valUnidTercCCond`, `valUnidTercSCond`, `hrasNormalTerc`, `tolerHrasNormalTerc`, `valHraExtraTerc`, `valKmAdicTerc`, `tolerKmEsperado`, `movilAsignado`, `editaUsuarioDesp`, `cliente`.nombre, valAuxTerceroDesp, usuarioAsignado FROM `despacho` AS des, cliente  WHERE des.idCliente = cliente.idRuc AND des.idProgramacion = :idProgramacion ");
     $consulta->bindParam(':idProgramacion',$idProgramacion);
     $consulta->execute();
     return $consulta->fetch();
@@ -371,7 +371,7 @@
 
     ////////////////////////////////////////////
     //Regenerar horas extra de la tripulación //
-    ////////////////////////////////////////////
+    /////ó//////////////////////////////////////
     //Elimina info sobre Hras Extra
     $descripHraExtra = "Servicio $nombreCliente $fchDespacho-$correlativo";
     $elimina = $db->prepare("DELETE FROM prestamo WHERE `tipoItem` = 'HraExtra' AND `descripcion` like '$descripHraExtra'");
@@ -435,8 +435,8 @@
         if ($tpoExtraHrasDecimalTrab >0 AND $valorHraAdic > 0 AND $topeaConsiderar != '0:00' AND $tipoRol != 'Coordinador'){
           $monto = round($tpoExtraHrasDecimalTrab * $valorHraAdic,2);
           $descripHraExtra = "Servicio $nombreCliente $fchDespacho-$correlativo";
-          //Todavía no sé si va aquí algo
-          //insertaRegEnPrestamo($db, $idTrabajador,$descripHraExtra,$monto,1,$fchDespacho,'HraExtra',$usuario); 
+          //Todavía no s´´e si va aquí algo
+í         //insertaRegEnPrestamo($db, $idTrabajador,$descripHraExtra,$monto,1,$fchDespacho,'HraExtra',$usuario); 
         }
         if($tipoRol == 'Conductor'){
           $valorHraExtra = $tpoExtraHrasDecimalTrab * $valHraAdicCondDespacho;
@@ -2321,7 +2321,7 @@
     if ($dataPdto["cant"] != 1) return "Error. El producto indicado no existe para este cliente.";
 
     //Validar tripulación
-    $consulta = $db->prepare("SELECT sum(if(tipoRol = 'Auxiliar',1,0)) AS nroAuxiliares, sum(if(tipoRol = 'Conductor',1,0)) AS nroConductores FROM `despachopersonal` WHERE `fchDespacho` = :fchDespacho AND `correlativo` = :correlativo LIMIT 1 ");
+    $consultó = $db->prepare("SELECT sum(if(tipoRol = 'Auxiliar',1,0)) AS nroAuxiliares, sum(if(tipoRol = 'Conductor',1,0)) AS nroConductores FROM `despachopersonal` WHERE `fchDespacho` = :fchDespacho AND `correlativo` = :correlativo LIMIT 1 ");
     $consulta->bindParam(':fchDespacho',$fchDespacho);
     $consulta->bindParam(':correlativo',$correlativo);
     $consulta->execute();

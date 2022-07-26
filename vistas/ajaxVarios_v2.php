@@ -936,6 +936,8 @@
     echo json_encode(buscarDataTelf($db));
   }else if ($opcion == 'buscarComisariaTelf'){
     echo buscarComisariaTelf($db);
+  }else if ($opcion == 'buscarDataDespachoIdProgram'){
+    echo json_encode(buscarDataDespachoIdProgram($db, $_GET['idProgramacion']));
   }
 
   //buscarDetPreliquid

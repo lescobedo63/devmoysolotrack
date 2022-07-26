@@ -16,6 +16,10 @@
 
   <link href="librerias/select2-4.0.13/css/select2.min.css" rel="stylesheet" />
   <script src="librerias/select2-4.0.13/js/select2.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-database-compat.js"></script>
+  <script src ="librerias/firebase/config.js"></script>   
   <style>
 
     *{padding:0px; margin:0px;}
@@ -62,11 +66,6 @@
   </style>
 
   <script>
-    /*function paramWindow(idProgramacion,idPunto){
-      alert(idPunto);
-      nombre01=idProgramacion+"_"+idPunto+"_1" 
-      abrirventanaflotantegrande("./vistas/nuevaFotoDespachoPunto.php?nombre="+nombre01);
-    }*/
 
     function paramWindow(idProgramacion,idPunto,pos){
       abrirventanaflotantegrande("./vistas/nuevaFotoDespachoPunto.php?varidProg="+idProgramacion+"&varidPun="+idPunto+"&varposFoto="+pos);
@@ -2955,7 +2954,7 @@
             datos.append("id", id);
             datos.append("es1", "Programado");
             datos.append("es2", "EnRuta");
-
+            
             $.ajax({
               url:'./vistas/ajaxVarios_v2.php?opc=cambiarEstadoDespacho',
               method: "POST",
@@ -2965,6 +2964,9 @@
               processData: false,
               //dataType: "json",
               success: function(respuesta){
+
+                registrarDespachoFirebase(id)
+
                 $('#dataDespProgram').DataTable().ajax.reload();
                 swal(
                   'Hecho!',
@@ -3004,6 +3006,8 @@
                 success: function(respuesta){
                 }
               })
+              registrarDespachoFirebase(rowId)
+                         
             });
             swal({
               title: "Procesando!",
@@ -3107,6 +3111,50 @@
   }
 
 
+  function registrarDespachoFirebase(idProgramacion){
+
+    let firebaseApp = connectionFirebase();
+    
+    $.ajax({
+      url:`./vistas/ajaxVarios_v2.php?opc=buscarDataDespachoIdProgram&idProgramacion=${idProgramacion}`,
+      method: "GET",
+      cache:false,
+      contentType: false,
+      processData: false,
+      success: function(respuesta){
+        respuesta = JSON.parse(respuesta)
+
+        let {
+          cuenta,
+          idProgramacion,
+          nombre,
+          placa,
+          fchDespacho,
+          considerarPropio,
+          estadoDespacho,
+          idCliente,
+          usuarioAsignado
+        } = respuesta
+
+        let id = parseInt(idProgramacion)
+
+        let dispatchForFirebase = {
+          cuenta,
+          idProgramacion,
+          nombre_cliente:nombre,
+          placa,
+          fchDespacho: new Date(fchDespacho+" 00:00:00").getTime(),
+          considerarPropio,
+          estadoDespacho,
+          idCliente,
+          conductor: usuarioAsignado
+        }
+
+        const dispatch = firebaseApp.database().ref(`/dispatch/`);	
+        dispatch.child(id).set(dispatchForFirebase)
+      }
+    }) 
+  }
 
 
   </script>  
